@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#58182F">
+  <title>Admin | 69th FAMILY</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .admin-container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+
+    .admin-panel {
+      background: #fff;
+      border: 1px solid #eadfe3;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 22px 0;
+    }
+
+    .admin-panel h1,
+    .admin-panel h2 {
+      color: #58182F;
+    }
+
+    .admin-form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .admin-form label {
+      display: grid;
+      gap: 7px;
+      font-weight: 600;
+    }
+
+    .admin-form input,
+    .admin-form textarea,
+    .admin-form select {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d8c6ce;
+      border-radius: 9px;
+      font: inherit;
+    }
+
+    .admin-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .admin-button {
+      padding: 11px 17px;
+      border: 0;
+      border-radius: 9px;
+      background: #762541;
+      color: white;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .admin-button.secondary {
+      background: #f0e5ea;
+      color: #58182F;
+    }
+
+    .admin-button.danger {
+      background: #9b303e;
+    }
+
+    .admin-status {
+      padding: 12px;
+      border-radius: 9px;
+      background: #f5eaf0;
+      color: #58182F;
+      overflow-wrap: anywhere;
+    }
+
+    .announcement {
+      border-top: 1px solid #eadfe3;
+      padding: 17px 0;
+    }
+
+    .announcement-body {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .announcement-meta {
+      color: #766a70;
+      font-size: .9rem;
+      margin: 8px 0;
+    }
+
+    .admin-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img
+          src="assets/batch-logo.jpg"
+          alt=""
+          class="brand-logo"
+        >
+        <span>69th FAMILY</span>
+      </a>
+      <a href="index.html">Homepage</a>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <p>ADMINISTRATION</p>
+    <h1>Announcement Manager</h1>
+    <p>Manage batch notices, deadlines and updates.</p>
+
+    <div id="status" class="admin-status" role="status">
+      Connecting to Supabase…
+    </div>
+
+    <section id="login-panel" class="admin-panel hidden">
+      <h2>Administrator login</h2>
+
+      <form id="login-form" class="admin-form">
+        <label>
+          Email
+          <input id="email" type="email" required autocomplete="username">
+        </label>
+
+        <label>
+          Password
+          <input id="password" type="password" required
+            autocomplete="current-password">
+        </label>
+
+        <button class="admin-button" type="submit">
+          Sign in
+        </button>
+      </form>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <section class="admin-panel">
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <h2 id="form-heading">Create announcement</h2>
+          <button id="signout" class="admin-button secondary" type="button">
+            Sign out
+          </button>
+        </div>
+
+        <form id="announcement-form" class="admin-form">
+          <input id="announcement-id" type="hidden">
+
+          <label>
+            Announcement title
+            <input id="title" maxlength="160" required
+              placeholder="e.g. Assignment submission deadline">
+          </label>
+
+          <label>
+            Details
+            <textarea id="body" maxlength="12000" required
+              placeholder="Enter the full announcement…"></textarea>
+          </label>
+
+          <label>
+            Category
+            <select id="category">
+              <option value="General">General</option>
+              <option value="Academic">Academic</option>
+              <option value="Deadline">Deadline</option>
+              <option value="Event">Event</option>
+              <option value="Urgent">Urgent</option>
+            </select>
+          </label>
+
+          <label style="display:flex;align-items:center;gap:10px">
+            <input id="published" type="checkbox" style="width:auto">
+            Publish immediately
+          </label>
+
+          <div class="admin-actions">
+            <button id="save-button" class="admin-button" type="submit">
+              Save announcement
+            </button>
+            <button id="cancel-edit" class="admin-button secondary hidden"
+              type="button">
+              Cancel edit
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-panel">
+        <h2>All announcements</h2>
+        <div id="announcement-list">Loading announcements…</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
