@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#58182f">
+  <meta name="description" content="69th FAMILY — the digital home of our MBBS batch.">
+  <title>69th FAMILY — The Digital Home of Our Batch</title>
+  <link rel="icon" href="./assets/batch-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="intro-screen" id="introScreen" aria-label="Loading 69th FAMILY">
+    <div class="intro-orbit orbit-one"></div><div class="intro-orbit orbit-two"></div>
+    <div class="intro-content">
+      <div class="intro-logo-wrap"><img src="./assets/batch-logo.jpg" alt="69th batch logo" class="intro-logo"></div>
+      <p class="eyebrow intro-eyebrow">THE DIGITAL HOME OF OUR BATCH</p>
+      <h1>69th <span>FAMILY</span></h1>
+      <p class="intro-tagline">Learn. Connect. Grow.</p>
+      <div class="loader-track"><span></span></div>
+      <p class="intro-status" id="introStatus">Bringing our world together</p>
+    </div>
+    <span class="intro-index">69 / FAMILY</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="69th FAMILY home">
+      <img src="./assets/batch-logo.jpg" alt="" class="brand-logo">
+      <span class="brand-copy"><strong>69th FAMILY</strong><small>THE DIGITAL HOME OF OUR BATCH</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#notifications" class="nav-link">Updates</a>
+      <a href="#platforms" class="nav-link">Platforms</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+    <a class="header-cta" href="#platforms">Explore <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-pattern" aria-hidden="true"><span class="pattern-ring ring-a"></span><span class="pattern-ring ring-b"></span><span class="pattern-ring ring-c"></span></div>
+      <div class="hero-content">
+        <div class="hero-kicker"><span class="kicker-dot"></span> 69TH MBBS BATCH <span class="kicker-line"></span></div>
+        <h1>One batch.<br><span>One family.</span></h1>
+        <p class="hero-description">Your academic life, batch updates and essential platforms — thoughtfully brought together in one place.</p>
+        <div class="hero-actions">
+          <a href="#platforms" class="button button-light">Explore our platforms <span aria-hidden="true">↗</span></a>
+          <a href="#notifications" class="text-link">Latest updates <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-side-note"><span class="side-rule"></span><span>LEARN<br>CONNECT<br>GROW</span></div>
+      <div class="hero-bottom"><span>69TH FAMILY DIGITAL PORTAL</span><span>BUILT FOR OUR JOURNEY <b>✳</b></span></div>
+    </section>
+
+    <section class="welcome-strip" id="about">
+      <div><p class="section-kicker">A SHARED SPACE</p><h2>Everything that keeps<br>our batch connected.</h2></div>
+      <p class="welcome-copy">One clear starting point for the tools we use, the updates we need, and the community we share.</p>
+    </section>
+
+    <section class="platform-section" id="platforms">
+      <div class="section-heading">
+        <div><p class="section-kicker">YOUR DIGITAL CAMPUS</p><h2>Made for our journey.</h2></div>
+        <span class="section-count">04 <i>PLATFORMS</i></span>
+      </div>
+      <div class="platform-grid">
+        <a class="platform-card notification-card" href="#notifications">
+          <div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></span><span class="card-arrow">↗</span></div>
+          <span class="card-number">01 / UPDATES</span><h3>Notifications</h3><p>Important notices, deadlines and batch announcements.</p><span class="card-action">View announcements <b>→</b></span>
+        </a>
+        <a class="platform-card" href="https://clinical-synapse.admincmc69.workers.dev/" target="_blank" rel="noopener noreferrer">
+          <div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/><circle cx="12" cy="12" r="8.5"/></svg></span><span class="card-arrow">↗</span></div>
+          <span class="card-number">02 / LEARNING</span><h3>Clinical Synapse</h3><p>Clinical learning, cases and academic exploration.</p><span class="card-action">Open platform <b>→</b></span>
+        </a>
+        <a class="platform-card" href="https://69th-batch-attendance-tracker.pages.dev/" target="_blank" rel="noopener noreferrer">
+          <div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 15l2.5 2.5L16 12"/></svg></span><span class="card-number-badge">LIVE LINK</span><span class="card-arrow">↗</span></div>
+          <span class="card-number">03 / ACADEMICS</span><h3>Attendance Tracker</h3><p>Access subject-wise attendance from one place.</p><span class="card-action">Check attendance <b>→</b></span>
+        </a>
+        <a class="platform-card" href="https://69th-batch-feedback.enosh17j.workers.dev/home" target="_blank" rel="noopener noreferrer">
+          <div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8z"/><path d="M8 12h8M8 8.5h5"/></svg></span><span class="card-arrow">↗</span></div>
+          <span class="card-number">04 / YOUR VOICE</span><h3>Feedback</h3><p>Share feedback and help improve our batch experience.</p><span class="card-action">Open feedback <b>→</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="updates-section" id="notifications">
+      <div class="updates-heading">
+        <div><p class="section-kicker">STAY IN THE LOOP</p><h2>Latest updates<span class="title-period">.</span></h2></div>
+        <span class="live-indicator"><i></i> BATCH NOTICEBOARD</span>
+      </div>
+      <div class="announcement-list" id="announcementList" aria-live="polite">
+        <div class="announcement-loading"><span class="mini-spinner"></span><span>Checking for announcements…</span></div>
+      </div>
+      <p class="updates-footnote" id="updatesFootnote">Published notices will appear here.</p>
+    </section>
+
+    <section class="closing-banner">
+      <div class="closing-decoration" aria-hidden="true"></div>
+      <p class="section-kicker">OUR BATCH. OUR JOURNEY.</p>
+      <h2>Better, <span>together.</span></h2>
+      <p>A shared space for everything ahead.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">69th <span>FAMILY</span></a>
+    <span>Learn. Connect. Grow.</span>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
